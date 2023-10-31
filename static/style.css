@@ -6,17 +6,6 @@ body {
     width: 100%;
     height: 100%;
 }
-#sobre,
-#habilidades,
-#curriculo,
-#portfolio,
-#contato{
-    font-family: Ubuntu, Arial, Helvetica, sans-serif; 
-    color: rgb(11, 12, 12);
-    width: 100%;
-    text-align: left;
-    align-items: center;
-}
 
 #header {
     position: fixed;
@@ -35,7 +24,7 @@ body {
     margin: 15px auto;
     display: block;
     width: 220px;
-    height: 220px;
+    border: 8px solid #2c2f3f;
     border-radius:50%;
 }
 
@@ -52,7 +41,7 @@ body {
     font-size: 1rem;    
     background: #212431;
     color: #fff;
-    padding: 0.5rem;
+    padding: 0.6rem;
     margin-right: 1rem;
     border-radius: 50%;
     transition: 0.3s;
@@ -98,24 +87,9 @@ body {
     color:#149ddd;
 }
 
-.social-links{
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.nav-menu li,
-.nav-menu li:hover{
-    text-decoration: none;
-    list-style: none;
-    padding-top: 1.2rem;
-}
-
 #main {
     margin-left: 300px;
 }
-
-
-
 
 section#inicio {
     background-image: url("../static/images/002.jpg");
@@ -262,40 +236,69 @@ i.menu-mobile {
     margin-bottom: -35px;
 }
 
-/* Animação*/
-[data-anime]{
+/* Animação */
+[data-anime] {
     opacity: 0;
     transition: 1s;
 }
 
-[data-anime="down" ]{
-    transform: translate3d(0,-100%,0);
+[data-anime="down"] {
+    transform: translate3d(0, -100%, 0);
 }
 
-[data-anime="up" ]{
-    transform: translate3d(0,100%,0);
+[data-anime="up"] {
+    transform: translate3d(0, 100%, 0);
 }
-[data-anime="left" ]{
-    transform: translate3d(-100%,0,0);
+[data-anime="left"] {
+    transform: translate3d(-100%, 0, 0);
 }
-[data-anime="right" ]{
-    transform: translate3d(50px,0,0);
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
 }
 
 [data-anime].animate {
     opacity: 1;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
 }
 
-@media (max-width :1860px){
+@media (max-width: 1860px){
     .carousel-control-prev{
         margin-left: 0;
-    
     }
     .carousel-control-next{
         margin-right: 0;
     }
     [data-anime ="right"] {
-        transform: translate3d(-100%,0,0);
+        transform: translate3d(0, 100%, 0);
     }
 }
+#btn-enviar-loader{
+    display: none;
+  }
+  
+  #alerta {
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+  }
+    #footer{
+        padding: 15px;
+        color: #fff;
+        font-size: 14px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        z-index: 9999;
+        background-color: #021124;
+        transition: .3s;   
+    }
+    @media (max-width: 1012px) {
+        #footer {
+            position: static;
+            width: auto;
+            padding:  20px 15px;
+        }
+        
+    }
